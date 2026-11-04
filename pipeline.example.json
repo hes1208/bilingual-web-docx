@@ -1,0 +1,114 @@
+{
+  "_comment": "复制为工作目录下的 pipeline.json，按目标站点修改。所有脚本读这个文件。",
+
+  "source_url": "https://www.nature.com/natsustain/submission-guidelines",
+  "html_dir": "html",
+  "min_html_bytes": 20000,
+  "output": "Nature_Sustainability_投稿指南_中英对照版.docx",
+
+  "_extract": "body_attr 为 null 时自动按 main/article/文本密度定位正文",
+  "body_attr": ["data-container-type", "body-content"],
+  "title_attr": ["data-container-type", "title"],
+
+  "drop_text_patterns": [
+    "^\\s*top of page",
+    "^\\s*back to top",
+    "^\\s*skip to",
+    "^\\s*on this page\\s*$",
+    "^\\s*share this",
+    "^\\s*download\\s*$",
+    "^\\s*返回页首"
+  ],
+
+  "chunk_chars": 6500,
+  "batch_chunks": 5,
+
+  "cover": {
+    "kicker": "NATURE SUSTAINABILITY",
+    "title_zh": "投稿指南",
+    "subtitle_zh": "中 英 对 照 版",
+    "subtitle_en": "Submission Guidelines · Bilingual Edition (English–Chinese)",
+    "toc_title": "目　录",
+    "part_toc_label": "本篇目次  CONTENTS",
+    "url_label": "源链接  ",
+    "source": "https://www.nature.com/natsustain/submission-guidelines",
+    "meta": [
+      ["期刊", "Nature Sustainability（Nat Sustain），ISSN 2398-9629"],
+      ["来源", "nature.com/natsustain/submission-guidelines"],
+      ["篇幅", "投稿指南 14 篇 ＋ 编辑政策 20 篇，共 34 篇"],
+      ["抓取日期", "2026 年 11 月 4 日"],
+      ["体例", "英文原文在上（灰字灰线）／中文译文在下（黑字绿线）"]
+    ],
+    "footnote": "译文由机器辅助翻译生成，仅供内部参考。\n凡涉及投稿决策，请以英文原文及期刊官方说明为准。"
+  },
+
+  "section": {
+    "header_left": "Nature Sustainability  ·  Submission Guidelines",
+    "header_right": "中英对照版"
+  },
+
+  "_parts": "docs 用英文标题匹配 extracted.json 的 title，不用索引。未匹配的篇目自动归入《其他》。",
+  "parts": [
+    {
+      "title_zh": "第一部分　投稿指南",
+      "title_en": "Part I — Submission Guidelines",
+      "desc": "从期刊定位、内容类型选择、材料准备与在线提交，到编辑流程、同行评议、原则性接收（AIP）与出版制作，构成投稿全链路。",
+      "docs": [
+        "Submission Guidelines",
+        "Aims & Scope",
+        "Content Types",
+        "Publishing options",
+        "Presubmission enquiries",
+        "Preparing your material",
+        "Formatting your initial submission",
+        "Writing and language",
+        "Double-anonymized peer review",
+        "Editorial Process & Peer Review",
+        "AIP and formatting",
+        "ORCID",
+        "Production process",
+        "Matters Arising"
+      ]
+    },
+    {
+      "title_zh": "第二部分　编辑政策",
+      "title_en": "Part II — Editorial Policies",
+      "desc": "期刊编辑政策全集：作者身份、利益冲突、研究伦理与生物安全、同行评议、报告规范、图像完整性、更正与撤稿、自存档与许可协议。",
+      "docs": [
+        "Editorial Policies",
+        "Acknowledgements",
+        "Artificial Intelligence (AI)",
+        "Appeals & Complaints",
+        "Authorship",
+        "Clinical Research",
+        "Collections, Guest Edited Collections, and Special Issues",
+        "Communicate with Respect",
+        "Competing interests",
+        "Confidentiality",
+        "Corrections, Retractions and Matters Arising",
+        "Research Ethics",
+        "Funding Statements",
+        "Image integrity and standards",
+        "Peer Review",
+        "Plagiarism and duplicate publication",
+        "Preprints & Conference Proceedings",
+        "Press and embargo policies",
+        "Reporting standards and availability of data, materials, code and protocols",
+        "Self archiving and license to publish"
+      ]
+    }
+  ],
+
+  "sizes": {
+    "h_top": 12.2,
+    "h_sub": 11.0,
+    "en_para": 9.2,
+    "zh_para": 10.3,
+    "en_list": 9.0,
+    "zh_list": 10.0,
+    "table": 8.3,
+    "doc_title": 16.5,
+    "part_title": 25.0,
+    "cover_title": 40.0
+  }
+}

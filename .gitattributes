@@ -1,0 +1,11 @@
+# Normalize line endings for source and docs
+* text=auto eol=lf
+*.py  text eol=lf
+*.sh  text eol=lf
+*.md  text eol=lf
+*.json text eol=lf
+
+# export_pdf.ps1 MUST stay byte-exact: Windows PowerShell 5.1 needs
+# UTF-8 BOM + CRLF, otherwise it fails with a misleading parser error
+# (reports "try without catch" at a line far from the real problem).
+*.ps1 -text

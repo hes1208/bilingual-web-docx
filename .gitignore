@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Working directory produced by the pipeline
+work/
+html/
+prev/
+chunks/
+extracted.json
+bilingual.json
+pipeline.json
+_*.txt
+_*.json
+
+# Outputs
+*.docx
+*.pdf
+!references/*.pdf
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
